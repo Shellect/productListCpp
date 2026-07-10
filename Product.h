@@ -6,7 +6,7 @@
 struct Product
 {
     std::string name;
-    int quantity;
+    float quantity;
     std::string measure;
     int price;
     bool status;

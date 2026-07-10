@@ -31,7 +31,9 @@ void Product::markForPurchase()
 std::string Product::toString() const
 {
     std::ostringstream oss;
-    oss << name << '|' << quantity << '|' << measure << '|'
-        << std::fixed << std::setprecision(2) << "₽" << price / 100;
+    oss << name << " | " 
+        << quantity << ' ' << measure << " | "
+        << "₽" << std::fixed << std::setprecision(2) << (float)price / 100
+        << " | " << (status ? "[✓]" : "[ ]");
     return oss.str();
 }

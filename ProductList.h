@@ -15,6 +15,15 @@ public:
     std::string show() const;
     void add();
     std::string remove();
+    /**
+     * @brief Отмечает продукт купленным
+     * @details Если продукт ещё был не куплен -
+     * отмечает его купленным (ставит status = true).
+     * @return Возвращает строку с купленным товаром (название, количество, статус)
+     */
+    std::string togglePurchased();
+    bool saveList();
+    bool readList();
 };
 
 #endif // PRODUCT_LIST_H

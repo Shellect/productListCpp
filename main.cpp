@@ -7,10 +7,11 @@
 #include "ProductList.h"
 #include "Utils.h"
 #include "Menu.h"
+
 int main()
 {
     int menuOption;
-    Menu menu = Menu();
+    Menu menu;
     ProductList productList;
 
     do
@@ -28,6 +29,13 @@ int main()
             std::cout << productList.remove();
             break;
         case 4:
+            std::cout << productList.togglePurchased();
+            break;
+        case 5:
+            productList.saveList();
+            break;
+        case 6:
+            productList.readList();
             break;
         case 0:
             std::cout << "Выход из программы. До новых встреч!\n";
