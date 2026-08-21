@@ -8,6 +8,8 @@ class ProductList
 {
 private:
     std::vector<Product> products;
+    void writeProduct(std::ofstream &file, const Product &product);
+    bool readProduct(std::ifstream &file, Product &product);
 
 public:
     ProductList();
